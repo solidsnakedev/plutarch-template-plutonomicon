@@ -1,16 +1,19 @@
-cabal-version:      3.0
-name:               plutarch-template
-version:            0.1.0.0
+cabal-version:   3.0
+name:            plutarch-template
+version:         0.1.0.0
+
 -- synopsis:
 -- description:
-homepage:           https://plutonomicon.github.io/plutarch-plutus
-license:            BSD-3-Clause
-license-file:       LICENSE
-author:             Seungheon Oh
-maintainer:         seungheon@mlabs.city
+homepage:        https://plutonomicon.github.io/plutarch-plutus
+license:         BSD-3-Clause
+license-file:    LICENSE
+author:          Seungheon Oh
+maintainer:      seungheon@mlabs.city
+
 -- copyright:
-build-type:         Simple
-extra-doc-files:    CHANGELOG.md
+build-type:      Simple
+extra-doc-files: CHANGELOG.md
+
 -- extra-source-files:
 
 common c
@@ -26,6 +29,7 @@ common c
     DuplicateRecordFields
     FunctionalDependencies
     GADTs
+    ImportQualifiedPost
     ImpredicativeTypes
     LambdaCase
     LexicalNegation
@@ -52,19 +56,16 @@ common c
     RecordWildCards
     RecursiveDo
     RoleAnnotations
+    TypeApplications
     TypeFamilies
     TypeFamilyDependencies
+    TypeOperators
     UnicodeSyntax
     UnliftedFFITypes
     UnliftedNewtypes
     ViewPatterns
-    TypeOperators
-    TypeApplications
-    ImportQualifiedPost
 
-  build-depends:
-    , base  >=4.9 && <5
-
+  build-depends:      base >=4.9 && <5
   ghc-options:
     -Weverything -Wno-unused-do-bind -Wno-missing-kind-signatures
     -Wno-partial-type-signatures -Werror -Wno-implicit-prelude
@@ -77,19 +78,20 @@ common c
     -fprint-explicit-kinds -fprint-explicit-foralls
 
 executable plutarch-template
-    import:           c
-    main-is:          Main.hs
-    -- other-modules:
-    -- other-extensions:
-    build-depends:
-                      -- This makes haskell.nix use latest staging version of plutarch up to flake input's commit.
-                      -- Run `nix flake update` to bump hackage set. It is recommanded to use versioned release
-                      -- and regularly run `nix flake update`.
-                      plutarch ==0
-                    , plutarch-ledger-api ==0
-                    , bytestring
-                    , text
-                    , base16-bytestring
+  import:           c
+  main-is:          Main.hs
 
-    hs-source-dirs:   app
-    default-language: Haskell2010
+  -- other-modules:
+  -- other-extensions:
+  build-depends:
+    , base16-bytestring
+    , bytestring
+    , plutarch             ==0
+    , plutarch-ledger-api  ==0
+    , text
+
+  -- This makes haskell.nix use latest staging version of plutarch up to flake input's commit.
+  -- Run `nix flake update` to bump hackage set. It is recommended to use versioned release
+  -- and regularly run `nix flake update`.
+  hs-source-dirs:   app
+  default-language: Haskell2010

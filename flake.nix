@@ -41,7 +41,7 @@
       debug = true;
       systems = [ "x86_64-linux" "aarch64-darwin" "x86_64-darwin" "aarch64-linux" ];
 
-      perSystem = { config, system, lib, self', ... }:
+      perSystem = { config, system, ... }:
         let
           pkgs =
             import haskell-nix.inputs.nixpkgs {
@@ -62,6 +62,7 @@
               "https://plutonomicon.github.io/plutarch-plutus/" = plutarch;
             };
             shell = {
+              shellHook = config.pre-commit.installationScript;
               withHoogle = true;
               withHaddock = true;
               exactDeps = false;
