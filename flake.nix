@@ -26,12 +26,17 @@
     plutarch.flake = false;
 
     pre-commit-hooks.url = "github:cachix/pre-commit-hooks.nix";
+
+    # This is for CI, for users who does not use Hercules CI, this input
+    # along with ./nix/hercules-ci.nix can be removed.
+    hercules-ci-effects.url = "github:hercules-ci/hercules-ci-effects";
   };
 
   outputs = inputs@{ flake-parts, nixpkgs, haskell-nix, iohk-nix, CHaP, plutarch, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } {
       imports = [
         ./nix/pre-commit.nix
+        ./nix/hercules-ci.nix
       ];
       debug = true;
       systems = [ "x86_64-linux" "aarch64-darwin" "x86_64-darwin" "aarch64-linux" ];
