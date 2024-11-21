@@ -74,7 +74,7 @@
           flake = project.flake { };
         in
         {
-          inherit (flake) devShells;
+          inherit (flake) devShells packages checks;
         };
     };
 }
