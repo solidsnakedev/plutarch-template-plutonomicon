@@ -85,8 +85,8 @@ executable plutarch-template
                       -- This makes haskell.nix use latest staging version of plutarch up to flake input's commit.
                       -- Run `nix flake update` to bump hackage set. It is recommanded to use versioned release
                       -- and regularly run `nix flake update`.
-                      plutarch ==999.0.0
-                    , plutarch-ledger-api ==999.0.0
+                      plutarch ==0
+                    , plutarch-ledger-api ==0
                     , bytestring
                     , text
                     , base16-bytestring

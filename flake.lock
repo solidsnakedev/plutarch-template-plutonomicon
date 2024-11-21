@@ -768,11 +768,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1732169927,
-        "narHash": "sha256-Xqh2ksEBrV5Ovo+WWcLU0fVygBfYqSbeVka2d7Zl/n0=",
+        "lastModified": 1732174770,
+        "narHash": "sha256-vede2OZsfD3TQisuClZ5xqFZtW3Ohsc0Ly5FQJ3wmxo=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "c8021779cd365b58838ed456a37d9a0858ba6f80",
+        "rev": "143ce3aca90924aee3071e1d375aba89e563a9f7",
         "type": "github"
       },
       "original": {
@@ -817,11 +817,11 @@
     "plutarch": {
       "flake": false,
       "locked": {
-        "lastModified": 1732169415,
-        "narHash": "sha256-pYgKY3AOS9qknIs5lv/euNqypLWcqm4M5to9fDppWpY=",
+        "lastModified": 1732174708,
+        "narHash": "sha256-JZRiqMlvTzSWUfF1GgejsOPAwH6hnkAocYT1cl0ADJo=",
         "owner": "plutonomicon",
         "repo": "plutarch-plutus",
-        "rev": "3fb238baa16209d26f2900993167e82d2af7e300",
+        "rev": "1f5b55325a8dbd99c54ff2e43e6113aba8dab6ef",
         "type": "github"
       },
       "original": {
