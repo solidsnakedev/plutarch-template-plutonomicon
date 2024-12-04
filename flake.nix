@@ -68,6 +68,7 @@
               exactDeps = false;
               tools = {
                 cabal = { };
+                haskell-language-server = { };
               };
             };
           };
