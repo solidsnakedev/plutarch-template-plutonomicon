@@ -1,8 +1,9 @@
 module Main (main) where
 
-import Plutarch (compile)
-import Plutarch.LedgerApi.V3 (PScriptContext)
+import Plutarch.Internal.Term (compile)
 import Plutarch.Prelude
+
+import Plutarch.LedgerApi.V3 (PScriptContext)
 import Plutarch.Script (serialiseScript)
 
 import Data.ByteString.Base16 qualified as Base16
